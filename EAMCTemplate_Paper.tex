@@ -1,0 +1,142 @@
+%% Esse arquivo foi produzido com base no arquivo FCEFyN-paper.tex, template das publicações da "Revista de la Facultad de Ciencias Exactas, Físicas y Naturales
+%% de la Universidad Nacional de Córdoba, Argentina.
+
+%% Originalmente feito por Ana Luiza Martins Karl, 17/06/2019
+
+%% Revisado por Matheus Muller Pereira da Silva, 18/07/2019
+
+%% Atualizado por José Renato Duarte Fajardo 15/08/2025
+
+%% Em caso de problemas, envie um e-mail para eamc@lncc.br
+\documentclass{eamc-class}
+
+
+% pacote para gerar "dummy text", 
+% comente para inserir seu texto
+\usepackage{lipsum} 
+
+% Título do trabalho
+\title{Example for EAMC Article}
+
+% Título curto para cabeçalho
+\shorttitle{EAMC Article}
+       
+% Autores
+\author[1]{Full Name of First Author}
+\author[2]{Full Name of Second Author}
+\author[1,2]{Full Name of Third Author}
+
+% Instituições 
+\affil[1]{Institute A, Petrópolis/RJ, Brazil}
+\affil[2]{Institute  B, Petrópolis/RJ, Brasil}
+
+
+% Sobrenome do primeiro autor para cabeçalho
+\firstauthor{Last name of first author}
+
+% Contato do autor para serem disponibilizados
+\contactauthor{Name}
+\email{email@email.com}  %email
+
+% Dados da publicação
+\thisvolume{Anais do XIX EAMC}
+\thisyear{2026}
+
+% Inicio do documento
+\begin{document}
+
+% Resumo e palavras chave
+\abstract{The Proceedings of XIX EAMC, including the full versions of all papers to be presented at the meeting, will be published in digital media. Therefore, it is extremely important that you prepare the digital PDF version of your contribution following the present template. The file size must be less than 4~MB. The Scientific Committee will evaluate all submitted papers. This paper may be written in English or Portuguese. The paper must have at least 5 pages, limited to a maximum of 10 pages. The abstract must not exceed 200 words.}
+
+\keywords{
+First keyword, Second keyword, Third keyword (up to 5 keywords)}
+
+% Inclui titulo, resumo e palavras chave
+\maketitle
+\thispagestyle{fancy}
+\printcontactdata
+
+
+\section{INTRODUCTION}
+\lipsum[1]
+
+\section{METHODOLOGY}
+\lipsum[2]
+
+
+\section{RESULTS AND DISCUSSION}
+\subsection{Equations, symbols and units}
+Number equations with an Arabic number enclosed in parentheses, placed flush right. Allow one blank line above and one below each equation. For example:
+
+\begin{equation}
+\vec{q}_{r}=-4\pi r^{2}k\frac{dT}{dr}
+\label{eq1}
+\end{equation}
+
+When referring to an equation in the text write Eq. (1), except at the beginning of a sentence, where Equation (1) should be used. 
+
+Symbols should be italicized throughout the text. Define all symbols as they appear in the text. A nomenclature section is not necessary.
+
+All data, including those shown in tables and figures, must be reported in SI units. 
+
+\subsection{Figures and tables}
+Figures and tables should be inserted as close as possible to their mention in the text. Enclosed text and symbols must be clearly readable; avoid small symbols. Supply good quality pictures and illustrations.
+
+Figures and tables and their captions should be centered in the text. Place figure caption below the figure, leaving one blank line between them. Place table title above the table, also leaving one blank line between them. Leave one blank line between the table or figure and the adjacent text. Color figures can be used. Number figures and tables consecutively using Arabic numerals (e.g., Figure 1, Figure 2, Table 1, Table 2). Refer to them in the text as Table 1 and Fig. 1 (except at the beginning of a sentence, where Figure 1 should be used).
+
+% TABLE EXAMPLE
+\begin{table}[H] % !htbp 
+\caption{Input parameters}
+\vspace{12pt}
+\centering{}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc|cc}        % {0.8\textwidth}
+\hline 
+Method LJ & Configuration && Method R2W & Configuration\tabularnewline
+\hline 
+$k_1$ (W/mK)  & $[0,0; 0,1]$ && $k_1$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
+\hline 
+$k_2$ (W/mK) & $[0,0; 0,1]$ && $k_2$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
+\hline 
+$n$ & $1,0$ && $n$ & $1,0$\tabularnewline
+\hline 
+\end{tabular*}
+\end{table}
+
+\begin{figure}[!htbp] %h or !htbp
+\vspace{-2pt}
+\begin{center}
+\includegraphics[scale = 1.0]{eamc-classFiles/eamc_logo.png}
+\caption{EAMC logo}
+\label{fig1}
+\end{center}
+\end{figure}
+
+Label coordinates in plots and add the corresponding units. Similarly, label columns/rows in tables and add the units.
+
+\subsection{Permission}
+You are responsible for making sure that you have the right to publish everything in your paper. If you use material from a copyrighted source, you may need to obtain permission from the copyright holder.
+
+\section{CALL TO REFERENCES IN THE BODY OF TEXT}
+References should be cited in the text using, for example: 
+\begin{verbatim}
+    \citep{}: for indirect citation.
+    \cite{}: for a direct quotation.
+\end{verbatim}
+
+A direct quotation will be shown like this: \citep{ArslanHansen1996}. And, the indirect citation will be shown like this: \cite{ArslanHansen1996}.
+
+Include your reference in the eamc-ref.bib file.
+    
+\section{CONCLUSIONS}
+This section should be included and need to show the main contributions of the paper in a briefly form.
+
+
+\section{\textit{Acknowledgements}}
+This section should be positioned between the end of the text and the reference list. Type \textbf{\textit{Acknowledgements}} in boldface italics.
+
+
+% REFERENCES
+\insertbibliography{eamc-ref.bib}
+
+
+\end{document}
